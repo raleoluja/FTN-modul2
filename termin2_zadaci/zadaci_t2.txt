@@ -1,0 +1,65 @@
+// Zadatak 1
+
+Data su dva niza. U oba niza nalaze se nazivi odredjenih vocaka. Potrebno je formirati treci niz koji ce da sadrzi sve elemente prvog i drugog niza.
+var vocke1 = ["banana", "kruska", "jabuka"];
+var vocke2 = ["tresnja", "sljiva", "jagoda"];
+
+
+// Zadatak 2
+
+Data su dva niza i oba niza nalaze se nazivi odredjenih vocaka, medjutim moze se desiti da jedna vocka postoji i u prvom i u drugom nizu. 
+Potrebno je formirati treci niz, koji ce imati samo jedinstvene vocke.
+
+var vocke1 = ["banana", "kruska", "jabuka", "sljiva"];
+var vocke2 = ["tresnja", "sljiva", "jagoda", "kupina", "malina"];
+
+// Zadatak 3
+Dat je niz koji sadrzi automobile. Automobili mogu u zavisnosti od vrste motora, da budu na dizel ili benzin. Formirati dva niza, jedan koji ce 
+da sadrzi automobile na dizel i drugi na benzin. Uociti u zadatom nizu, kako je moguce odrediti da li je auto na dizel ili na benzin.
+
+var automobili = [ ["mercedes", "b"], ["opel", "d"], ["toyota", "d"], ["bmw", "b"], ["volvo", "d"]];
+
+
+// Dat je spisak zaposlenih i njihove godine u sledecem obliku:
+var zaposleni = [
+  ["pera", "jova", "marko"],
+  [28,      31,     19]
+];
+
+
+// Zadatak 4
+// Za zadate zaposlene ispisati svakog zaposlenog i koliko svaki zaposleni ima godina
+
+// Zadatak 5
+// U spisku zaposlenih naci koliko jova ima godina
+
+// Zadatak 6
+// Naci srednju vrednost godina zaposlenih
+
+
+// Zadatak 7
+// Dat je spisak zaposlenih u sledecem obliku
+var zaposleni = [
+  ["pera",      "jova",     "marko"],
+  [28,          31,         39],
+  ["inzenjer",  "tehnicar", "doktor"],
+  [700,         0,        0]
+];
+
+
+// Za zadate zaposlene izracunati i podesiti plate ostalih zaposlenih tako da:
+// tehnicar ima 70% plate inzenjera
+// doktor ima platu tehnicara + pola plate inzenjera
+// nakon toga proci kroz spisak zaposlenih i ispisati njihova imena, njihove radne pozicije i njihove plate
+// Napomena: Sve izmene vrsiti nad postojecom strukturom
+
+
+// Zadatak 8
+// Za zadatu listu zaposlenih izracunati godinu rodjenja na osnovu trenutnih godina
+// Izracunati godinu rodjenja za svakog zaposlenog i dobijene rezultate smestiti u niz
+// koji je potrebno ubaciti u var zaposleni.
+// Napomena: Za dobijanje trenutne godine mozete iskoristiti sledeci kod
+// var d = new Date();
+// var godina = d.getFullYear();
+
+
