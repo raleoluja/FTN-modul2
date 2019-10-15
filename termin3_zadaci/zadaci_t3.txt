@@ -1,0 +1,72 @@
+Zadatak 1:
+
+Napisati funkciju koja prima par korisnicko ime lozinka u obliku:
+
+korisnicko_ime|lozinka
+
+funkcija treba da razdvoji korisnicko ime i lozinku po delimiteru ("|") i da doda u listu.
+Pozvati funkciju za nekoliko razlicitih parova korisnicko ime i lozinka i zatim ih sve ispisati u obliku:
+
+Korisnicko ime je : pera
+lozinka je : peric
+
+Korisnicko ime je : marko
+Lozinka je : markovic
+
+Napomena par korisnicko ime i lozinka cuvati u listi koja je element liste koja cuva sve parove korisnicko ime i lozinka.
+
+
+Zadatak 2
+Napisati funkciju koja za dva unesena stringa formira i ispisuje novi string koji se sastoji od dva puta ponovljena prva tri karaktera iz prvog stringa i poslednja tri karaktera drugog stringa.
+
+Primer izvršavanja programa:
+prvi string: abcdef
+drugi string: ghijkl
+abcabcjkl
+
+Zadatak 3
+Napisati program koji formira akronim za zadatu frazu. Akronim se sastoji od kapitalizovanih
+prvih slova reči u frazi. Na primer RAM je akronim za frazu „random access memory“.
+
+Primer izvršavanja programa:
+fraza: random access memory
+akronim za unetu frazu je: RAM
+
+
+Zadatak 4:
+Data je struktura:
+
+var ocene = [8, 7, 6, 9, 8, 10, 8];
+var ime_prez = ["Marko", "Markovic"];
+
+Napraviti funkciju koja prima dva parametra, prvi je niz ocena, drugi sadrzi ime i prezime.
+Funkcija treba da izracuna prosek ocena datog studenta i da ispise njegovo ime i prezime.
+Npr: "Student Marko Markovic ima prosek 8.7..."
+
+
+Zadatak 5:
+U datoj strukturi se nalazi lista drzava sa svojim kodovima. U drugoj strukturi se nalaze gradovi sa kodovima odredjene drzave.
+Ispisati sve gradove i na osnovu koda drzave ispisati i njeno skraceno ime.
+Npr: Novi Sad - RS, London - UK, Madrid - ESP
+
+var drzave = { 1 : "RS" , 2 : "RU" , 3 : "UK", 4 : "ESP" };
+var gradovi = [ ["London", 3], ["Novi Sad", 1], ["Moskva", 2], ["Madrid", 4]];
+
+Zadatak 6:
+Napisati funkciju koja treba da primi kao parametar niz koji sadrzi parove naziva korisnika i njihovih korisnickih uloga,
+npr: "markec|admin", "godzz|webmaster", "nikola123|admin", "nennad|moderator"
+
+U funkciji se kreira drugi niz, koji sadrzi samo korisnicke uloge i to vraca kao parametar. Napomena: ne dodavati duplikate.
+
+Zadatak 7:
+Napisati funkciju koja prima datu strukturu:
+var korisnici = ["marko:17", "nikola:28", "pera:23", "nenad:15"];
+
+Funkcija treba da prodje kroz zadati niz i da ispise da li je osoba punoletna ili ne.
+Primer izvrsavanja:
+Marko - Ne
+Nikola - Da
+Pera - Da
+Nenad - Ne
+
+
