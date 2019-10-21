@@ -1,0 +1,73 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="js/jquery-1.11.0.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+   <style type="text/css">
+	p.eco {
+		visibility: hidden;
+		font-size: large;
+		font-weight: bold;
+		color: green
+	}
+	
+	
+  </style>
+  <script language="JavaScript">
+
+
+
+  </script>
+</head>
+<body>
+<div class="container">
+  <h2>Produzenje registracije</h2>
+  <form action="Zadatak2.html" method="get" onSubmit="return proveraForme(this)">
+    <div class="form-group">
+      <label for="ime">Ime:</label>
+      <input type="text" class="form-control" id="ime" name="ime" placeholder="Unesite ime">
+    </div>
+    <div class="form-group">
+      <label for="prezime">Prezime:</label>
+      <input type="text" class="form-control" id="prezime" name="prezime" placeholder="Unesite prezime">
+    </div>
+    <div class="form-group">
+      <label for="jmbg">Jmbg:</label>
+      <input type="text" class="form-control" id="jmbg" name="jmbg" placeholder="Unesite jmbg">
+    </div>
+    <div class="form-group">
+      <label for="registracija">Registracija:</label>
+      <input type="text" class="form-control" id="registracija" name="registracija" placeholder="Unesite registraciju">
+    </div>
+    <div class="form-group">
+	  <label for="sel1">Marka vozila:</label>
+	  <select name="marka" class="form-control" id="sel1">
+	    <option value="1"></option>
+  		<option value="2">Mercedes</option>
+  		<option value="3">Peugeot</option>
+  		<option value="4">Renault</option>
+	  </select>
+	</div>
+	<div class="form-group" id="tipVozila">
+	  <label for="sel2">Tip vozila:</label>
+	  <select name="tip" class="form-control" id="sel2">
+  		<option value="1"></option>
+  		<option value="2">Elektricno</option>
+  		<option value="3">Motorno</option>
+	  </select>
+  </div>
+    <button type="submit" name="posalji" class="btn btn-default">Submit</button>
+  </form>
+</div>
+
+<p id="menu">U kombo boksu su navedene sledeće marke vozila: <i>Mercedes</i>, <i>Peugeot</i> i <i>Renault</i>!</p>  
+
+<p id="eco" class="eco">
+Eko klasa.
+</p>
+<script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+Zadatak 1:
+
+Napraviti na html stranici dugme koje ce kada se klikne pozvati odgovarajucu funkciju i na stranici ce ispisati
+"Hello world!"
+
+Zadatak 2:
+
+Modifikovati zadatak 4 tako da se sada klikom na dugme salju dva parametra (ime i prezime osobe), tako da ce na
+stranici pisati npr: Hello Pera Peric!
+
+Zadatak 3:
+
+a)
+Dodati na HTML stranicu combo box (select) sa proizvoljnim vrednostima i dodati jos jedno tekstualno polje. Javascriptom omoguciti da kad se promeni vrednost u selectu, ta 
+ista vrednost se upise u tekstualno polje koje se nalazi na stranici.
+
+b)
+Dodati na stranicu jos jednu dugme koje sadrzaj koji se nalazi u tekstuelnom polju
+upisuje u header h2, koji se nalazi na stranici sa id-em “secret” a inicijalno je sakriven.
+
+
+
+
+Zadatak 4
+	
+	4.1. 
+
+	Proveriti da li su sva polja forme popunjena. Ukoliko sva polja forme nisu popunjena
+	zabraniti submit forme i prebaciti fokus na polje koje nije popunjeno.
+
+	4.2. 
+
+	Proveriti da li su pocetna slova imena i prezimena napisana velikim slovom i da li JMBG ima 13 brojeva.
+
+	4.3. 
+
+	Red Tip vozila ima combo box sa dve vrednosti: "Motorno" i "Elektricno", napraviti tako da se paragraf "Eko klasa" prikazuje prilikom ulaska kursora u taj red, a da se sakriva prilikom njegovog izlaska
+
+	4.4. 
+
+	Ukoliko je odabran elektricni tip vozila obojiti paragraf "Eko klasa" zelenom bojom, ukoliko je odabran motorni tip vozila obojiti isti paragraf crvenom bojom
+
+	4.5.
+
+	Preuzeti parametre forme iz Zadatak1.html i uneti ih u tabelu Zadatak2.html
+
+
+Zadatak 5
+
+	5.1.
+	
+	Napraviti objekat koji sadrzi informacije o registraciji (ime i prezime vlasnika, tip vozila) i poseduje funkciju koja racuna cenu registracije na osnovu kubikaze automobila.
+
+	5.2.
+	
+	Popuniti paragrafe koje se nalaze na stranici odgovarajucim vrednostima iz objekta.
