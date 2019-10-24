@@ -1,0 +1,196 @@
+Zadatak 1
+
+Izmeniti happy birthday zadatak, tako da sada upućuje generičku čestitku za proizvoljnu osobu,
+koristiti callbacke:
+-Napisati funkciju generickaCestitka koja prima dva parametra: person (osoba kojoj se čestita), event (šta se osobi čestita)
+-Funkcija generickaCestitka u sebi sadrži document.write-ove iz happy birthday zadatka izmenjene tako da koriste parametre funkcije
+-Napisati funkciju greeter, funkcija greeter treba da bude funkcija višeg reda, prima dva parametra: text (podaci za prosledjivanje callback funkciji) i callback (callback funkcija)
+-Parametar tekst je string koji u sebi sadrži osobu kojoj treba da se česita i event koji treba da se čestita odvojen zarezom npr: "pera,birthday"
+-Funkcija greeter u posebne promenljive iz parametra text izvlači potrebne podatke, proverava da li je parametra callback funkcija (uz pomoc typeof) i sa tim podacima poziva callback funkciju
+-Pozvati greeter funkciju
+-Napisati funkciju generickaCestitkaKonzola, funkcija treba da bude identična funkciji generickaCestitka sa razlikom da se umesto document.write u njoj koristi console.log funkcija
+
+
+Zadatak 2
+
+Napraviti program koji pravi pozdrave u zavisnosti od parametara koji su mu prosledjeni. 
+Ukoliko se funkciji prosledi npr "John", "Smith", "Man" program ce ispisati:
+Hello, Mr. John Smith.
+Koristiti callbacke:
+-Napisati funkciju hello, funkcija prima tri parametra: name, surname, gender (kao vrednost parametra gender šalje se string "Man" ili "Woman"). 
+ Funkcija na osnovu parametra gender ispisuje pozdrav sa Mr. ili Ms.
+-Napisati funkciju višeg reda sayHello, funkcija prima tri parametra: fullname (puno ime osobe, npr: "John Smith"), gender, helloFunction (callback funkcija, u pozivu sayHello
+ kao helloFunction proslediti hello funkciju)
+-Funkcija sayHello poziva helloFunction tako što joj prosledjuje tri parametra ime (dobijeno iz fullname parametra), prezime (dobijeno iz fullname parametra) i gender.
+
+Zadatak 3
+
+Napraviti program koji ispisuje elemente niza koji su mi prosledjeni na sledeći način:
+Ukoliko niz sadrži Pera, Djura, Mika ispis će biti:
+1. Pera
+2. Djura
+3. Mika
+
+Koristiti callbacke: funkcija koja treba da implementira zadatak treba da kao parametar primi callback funkciju za ispis, 
+                     pri pozivu kao callback funkciju proslediti ili console.log ili alert.
+
+
+Zadatak 4
+
+Napraviti program koji ispisuje elemente dva niza koji su mi prosledjeni na sledeći način:
+Ukoliko niz1 sadrži Pera, Djura, Mika
+A niz2 sadrži Peric, Djuric, Mikic
+Ispis će biti:
+1. Pera Peric
+2. Djura Djuric
+3. Mika Mikic
+
+Koristiti callbacke: funkcija koja treba da implementira zadatak treba da kao parametar primi callback funkciju za ispis, 
+                     pri pozivu kao callback funkciju proslediti ili console.log ili alert.
+
+Zadatak 5
+
+Pokrenuti zadatak 5 i razmotriti ispis u konzoli koji se dešava na klik dugmeta.
+Izmeniti zadatak tako da se ispisuje odgovarajući indeks dugmeta.
+
+Zadatak 6
+
+Izmeniti forEach primer sa slajdova tako da se koristi arrow funkcija kao callback.
+
+Zadatak 7
+
+U script fajlu zadatka 7 (7. arrow ispis) nalazi se niz objekata sa podacima o vremenu u gradovima: Objekti su sledeceg obilika:
+{
+	clouds: {all: 90},
+	coord: {lon: 19.84, lat: 45.25},
+	dt: 1548051660,
+	id: 3194360,
+	main: {temp: 273.67, pressure: 1021, humidity: 95, temp_min: 273.15, temp_max: 274.15},
+	name: "Novi Sad",
+	sys: {type: 1, id: 7030, message: 0.0041, country: "RS", sunrise: 1548051128, …},
+	visibility: 5000,
+	weather: (2) [{…}, {…}],
+	wind: {speed: 1.5, deg: 330}
+}
+Uz pomoć forEach-a proci kroz sve objekte i u konzoli ispisati svojstvo name (naziv grada) i svojstvo temp (svojstva main) umanjeno za 273,15.
+-ForEach-u proslediti arrow funkciju kao callback (neka prima dva parametra: objekat i index), prvi parametar callback funkcije će biti trenutni objekat for petlje.
+-U callback funkciji pristupiti svojstvima trenutno objekta i logovati ih u konzolu.
+
+Zadatak 8
+
+Napisati tri funkcije: 
+	-uvecaj: kao parametar prima broj, kao rezultat vraća taj broj pomnožen sa brojem 2
+	-umanji: kao parametar prima broj, kao rezultat vraća taj broj podeljen sa brojem 2
+	-map: kao parametre prima niz brojeva i callback funkciju (callback funkcija treba da samo prima broj i vraća izmenjenu vrednost istog), 
+	      kao rezultat funkcija vraća novi niz brojeva dobijenih tako što je prosledjeni niz brojeva transformisan callback funkcijom
+		  Ključni tekst:
+			"vraća novi niz brojeva" - inicijalno u map funkciji napraviti prazan niz koji će biti ujedno i povratna vrednost map funkcije, taj niz popuniti na osnovu vrednosti iz prvog niza i prosledjenje callback funkcije
+			
+
+Testirati funkciju map nad nizom:
+let n = [1, 2, 3, 4, 5];
+
+U konzoli ispisati:
+	vrednost orginalnog niza,
+	rezultat map funkcije, kada se map funkciji pošalju orginalni niz i funkcija uvecaj,
+	rezultat map funkcije, kada se map funkciji pošalju orginalni niz i funkcija umanji,
+	rezultat map funkcije, kada se map funkciji pošalju orginalni niz i funkcija za korenovanje brojeva (Math.sqrt)
+	
+
+Zadatak 9
+
+Napraviti program koji, uz pomoć forEach funkcije, prolazi kroz niz brojeva  i ispisuje njihove kvadratne korene (Funkcija Math.sqrt).
+Ukoliko niz sadrzi [1, 2, 3, 4 , 5] ispis ce biti:
+1. 1
+2. 1.4142135623730951
+3. 1.7320508075688772
+4. 2
+5. 2.23606797749979
+
+Koristiti callbacke (arrow funkciju proslediti for each): funkcija koja treba da implementira zadatak treba da kao parametar primi callback funkciju za ispis, 
+pri pozivu kao callback funkciju proslediti ili console.log ili alert.
+
+Zadatak 10
+
+Napraviti program koji, uz pomoć forEach funkcije, prolazi kroz niz brojeva i ispisuje njihove stepenovane vrednosti (Funkcija Math.pow), za vrednosti stepena koristiti drugi niz.
+Ukoliko niz1 sadrži [1, 2, 3, 4 , 5], niz2 sadrži vrednosti [2, 3, 4, 5, 6] ispis će biti:
+1. 1
+2. 1.4142135623730951
+3. 1.7320508075688772
+4. 2
+5. 2.23606797749979
+
+Koristiti callbacke (arrow funkciju proslediti for each): funkcija koja treba da implementira zadatak treba da kao parametar primi callback funkciju za ispis, 
+pri pozivu kao callback funkciju proslediti ili console.log ili alert.
+
+Zadatak 11
+
+U okviru foldera 11. events, implementirati reakciju na sledeće događaje:
+	-click: kada se klikne na HTML DOM element sa id-jem "kockica" promeniti stil backgroundColor na "orange", a ukoliko je stil backgroundColor "orange" promeniti backgroundColor na "" (prazan string)
+	-mouseenter: kada se miš postavi na HTML DOM element sa id-jem "kockica" promeniti stil backgroundColor na "green"
+	-mouseleave: kada se miš postavi na HTML DOM element sa id-jem "kockica" promeniti stil backgroundColor na "" (prazan string)
+	Prilikom svakog događaja, u HTML DOM element sa id-jem "dynamicLabel" kao innerHTML postaviti tekst naziva događaja.
+	Zadatak rešavati u okviru window.onload događaja (prokomentarisati zašto).
+	Za rešavanje koristiti funkciju addEventListner kao što je iskorišćena u primeru 1_this, a callback napisati pomoću arrow funkcije.
+
+Zadatak 12
+Napisati tri funkcije: 
+	-deljivoSaTri: kao parametar prima broj, kao rezultat vraća boolean vrednost (true ili false) ako je broj deljiv sa 3 (broj je deljiv sa 3 ako je ostatak pri deljenju 0, za dobijanje ostatka pri deljenju koristiti operator %)
+	-paranPozitivanBroj: kao parametar prima broj, kao rezultat vraća boolean vrednost (true ili false) ako je broj paran i pozitivan
+	-filter: kao parametre prima niz brojeva i callback funkciju (callback funkcija treba da samo prima broj i vraća boolean vrednost true ili false), 
+	         kao rezultat funkcija vraća novi niz brojeva dobijenih tako što su u novi niz ubačeni brojevi iz orginalnog niza za koje je callback funkcija vratila true  
+		  Ključni tekst:
+			"vraća novi niz brojeva" - inicijalno u filter funkciji napraviti prazan niz koji će biti ujedno i povratna vrednost filter funkcije, taj niz popuniti na osnovu vrednosti iz prvog niza i prosledjenje callback funkcije
+			
+
+Testirati funkciju filter nad nizom:
+let n = [-21, -17, -3, -1, 2, 3, 5, 8, 9, 12, 14, 15];
+
+U konzoli ispisati:
+	vrednost orginalnog niza,
+	rezultat filter funkcije, kada se filter funkciji pošalju orginalni niz i funkcija deljivoSaTri,
+	rezultat filter funkcije, kada se filter funkciji pošalju orginalni niz i funkcija paranPozitivanBroj
+	
+
+//Napredno:
+
+Zadatak n1
+Napraviti funkciju koja prima osnovu za sabiranje i vraca funkciju koja sabira broj
+sa osnovo za sabiranje.
+var saberi5 = osnova(5);
+saberi5(3) //8
+saberi5(7) //13
+
+Zadatak n2
+Napravi funkciju koja vraca funkciju koja ispisuje sledeci fibonacijev broj.
+var fib = fibbonacif(0,1);
+fib(); // 0
+fib(); // 1
+fib(); // 1
+fib(); // 2
+fib(); // 3
+fib(); // 5
+fib(); // 8
+... 
+
+Zadatak n3
+Pogledati folder n3. Tekst zadatka je dat u vidu komentara u fajlovima module.js, script.js
+
+//Prototyping
+
+Zadatak p1
+
+Kreirati objekat smestaj koji od atributa ima naziv, adresu i grad. Od funkcija ima jednu funkciju stampaj koja na stranicu ispisuje pomenute atribute.
+Kreirati objekat hotel koji nasledjuje smestaj i koji pored postojecih atributa iz smestaj ima atribut broj zvezdica (hotela).
+Hotel redefinise metodu stampaj tako da jos ispisuje broj zvezdica i ima jos jednu dodatnu metodu predstaviSe koja ukratko opisuje hotel.
+
+Zadatak p2
+
+Kreirate objekat poruka koji od atributa ima naziv posiljaoca, naziv primaoca i sadrzaj poruke. Ima metodu stampaj koja na stranicu ispisuje pomenute atribute.
+Kreirati objekat SMSPoruka koji nasledjuje Poruku. Od dodatnih atributa ima broj telefona posiljaoca i primaoca. Redefinise metodu stampaj tako da ukljucuje pomenute atribute.
+Kreirate objekat Email poruka koji nasledjuje poruku. Od dodatnih atributa ima email adrese posiljaoca i primaoca i redefinise metodu stampaj tako da ukljucuje pomenute atribute. Pored toga ima jos jednu metodu koja se zove potpisPosiljaoca i koja ima jedan parametar koji ce biti ispisan kao potpid.
+
+Zadatak p3
+
+Prosiriti zadatak sa webshopom tako da se omoguci login dve vrste korisnika. Prva vrsta korisnika je MaloprodajniKorisnik a druga VeleprodajniKorisnik. VeloprodajniKorisnik i MaloprodajniKorisnik nasledjuju korisnika koji kao parametre ima ime i prezime.
+Kada korisnik doda odredjeni proizvod u korpu na stranici treba da mu se ispise ukupna cena tih proizvoda, uz to da veleprodajni korisnik ima popust od 15%.

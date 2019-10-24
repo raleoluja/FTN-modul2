@@ -1,0 +1,62 @@
+<html>
+	<body>
+		<script type="text/javascript">
+			// Zadatak 
+
+			// Kreirati objekat smestaj koji od atributa ima naziv, adresu i grad. Od funkcija ima jednu funkciju stampaj koja na stranicu ispisuje pomenute atribute.
+			// Kreirati objekat hotel koji nasledjuje smestaj i koji pored postojecih atributa iz smestaj ima atribut broj zvezdica (hotela).
+			// Hotel redefinise metodu stampaj tako da jos ispisuje broj zvezdica i ima jos jednu dodatnu metodu predstaviSe koja ukratko opisuje hotel.
+
+
+			// Funkcija smestaj koja ima tri parametra naziv, adresu i grad
+			function Smestaj(naziv, adresa, grad) {
+				this.naziv = naziv;
+				this.adresa = adresa;
+				this.grad = grad;
+			};
+
+			// funkcija stampaj se dodaje u smestaj tako da bi naslednici mogli da je koriste
+			Smestaj.prototype.stampaj = function() {
+					document.write("Smestaj: " + this.naziv + ", nalazi se na adresi :" + this.adresa + ", u gradu " + this.grad + "<br />");
+			};
+			
+
+			// Dodatni parametar ovde je broj zvezda
+			function Hotel(naziv, adresa, grad, brZvezda) {
+				// Ovim pozivamo gorepomenutu funkciju sa odgovarajucim parametrima i obavezno na prvom mestu this
+				Smestaj.call(this, naziv, adresa, grad); 
+				
+				this.brZvezda = brZvezda;
+				
+			};
+			
+
+			// Ovim podesavamo da Hotel 'nasledjuje' smestaj
+			Hotel.prototype = Object.create(Smestaj.prototype);
+			// Navodimo konstruktor za hotel
+			Hotel.prototype.constructor = Hotel;
+			// Redefinisemo funkciju stampaj tako da se poziva stampaj od smestaja plus nesto dodatno
+			Hotel.prototype.stampaj = function() {
+				// Ovime pozivamo funkciju stampaj iz smestaja
+				Smestaj.prototype.stampaj.call(this);
+
+				// dodajemo ono sto nam je potrebno za hotel
+				document.write("Hotel ima " + this.brZvezda + " zvezda <br>");
+			}
+
+			// Dodatna funkcija za hotel
+			Hotel.prototype.predstaviSe = function(opis) {
+				document.write(opis + "<br>");
+			}
+
+			
+			// Kreiranje objekta
+			var h = new Hotel("Hotel Park", "Futoska 144", "Novi Sad", 4);
+			
+			// Pozivanje metoda
+			h.stampaj();
+			h.predstaviSe("Mi smo hotel smesten u okviru parka");
+		</script>
+			
+	</body>
+</html>

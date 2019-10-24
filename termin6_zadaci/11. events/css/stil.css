@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+body {
+	background: #efddb2;
+}
+
+.status {
+	color: #000;
+	width: 100%;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 1.5em;
+	padding: 1em;
+}
+
+.staticLabel {
+	color: #1d556f;
+}
+
+.dynamicLabel {
+	color: #fa360a;
+	font-weight: bold;
+	font-family: monospace;
+}
+
+.kockica {
+	width: 8em;
+	height: 8em;
+	background: #288fb4;
+	margin: 10% auto;
+	border-radius: 10px;
+}
