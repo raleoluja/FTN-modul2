@@ -1,0 +1,162 @@
+﻿//Zadatak 0
+Prepraviti JavaScript kod u folderu Zadatak 0 da koristi typescript.
+Pri selektovanju elemenata koristiti TypeAssertion za odgovarajuce DOM Elemente.
+
+//Zadatak 1
+Prepraviti zadatak 2 sa termina 6 da koristit typescript:
+
+Napraviti program koji pravi pozdrave u zavisnosti od parametara koji su mu prosledjeni. 
+Ukoliko se funkciji prosledi npr "John", "Smith", "Man" program ce ispisati:
+Hello, Mr. John Smith.
+Koristiti callbacke.
+
+//Zadatak 2
+Prepraviti zadatak 5 sa termina 6 da koristi typescript
+
+//Zadatak 3
+Napisati klasu Valjak koja opisuje geometrijsku figuru valjak.
+Klasa Valjak treba da se sastoji iz 2 objekta-člana: klase Krug i klase Pravougaonik. (Kompozicija)
+U klasa Valjak implementirati:
+	- konstruktor sa parametrima
+	- get metodu R - vraća poluprečnik baze valjka (poluprečnik r kruga)
+	- get metodu H - vraća visinu omotača valjka (stranica b pravougaonika)
+	- metod getP - vraća površinu valjka (Povrsina valjka se racuna po formuli 2*r*r*PI+2*r*PI*H) PI je konstanta Math.PI
+	- metod getV - vraća zapreminu valjka (Zapremina valjka se racuna po formuli V=r*r*PI*H)
+Klasu Krug opisati pomoću polja r tipa number koje predstavlja poluprečnik kruga.
+U klasi Krug implementirti
+	- konstruktor sa parametrima (sa podrazumevanim vrednostima za parametre)
+	- get metodu R
+	- metod getO (Obim kruga se racuna po formuli O = 2*r*PI)
+	- metod getP (Povrsina kruga se racuna po formuli P = r*r*PI)
+Klasu Pravougaonik opisati pomoću polja a i b tipa number koja predstavljaju stranice a i b pravougaonika.
+U klasi Pravougaonik implementirati:
+	- konstruktor sa parametrima (sa podrazumevanim vrednostima za parametre)
+	- get metod A
+	- get metod B
+	- metod getO (Obima pravugaonika se racuna po formuli O = 2*a + 2*b)
+	- metod getP (Povrsina pravougaonika se racuna po formuli P = a*b)
+
+//Napraviti odgovarajucu HTML stranicu koja testira funkcionalnosti klasa.
+
+//Zadatak 4
+Napisati klasu Pas.
+Svaki pas ima ime, starost (u psećim godinama), podatak da li je vakcinisan i naziv rase.
+Napisati konstruktor (sa podrazumevanim vrednostima za parametre), gettere i settere.
+Psa je moguće vakcinisati, ispisati njegovu starost u ljudskim godinama*, ispisati sve podatke o psu. (napraviti metode za navedene funkcionalnosti)
+
+Kreirati posebnu Kennel klasu. Kennel klasa ima naziv, adresu, i niz Pasa.
+Napisati konstruktor koji kao parametre prima samo naziv i adresu.
+Implementirati getere i setere, kao i metodu za dodavanje pasa u niz.
+(Prilikom testiranja u taj niz dodati barem 7 pasa). Implementirati metode koje omogucuju sledece funkcionalnosti: 
+	-pronaći najstarijeg psa
+	-pronaci najmladjeg psa
+	-ispisati imena vakcinisanih pasa.
+	
+*Napomena: Jedna pseća godina je 7 ljudskih.
+	
+//Zadatak 5 
+Pogledati folder Calculator. Tekst zadatka se nalazi u html stranici i u odgovarjucem .ts fajlu
+  
+//Prepraviti zadatke sa termina dva da koriste typescript klase:
+
+// Zadatak 6 (Raditi u folderu Zadatak6)
+Dat je tekst zadataka koji je sličan zadatku 4 sa termina 3. 
+Zadatak implementirati upotrebom klasa. Na osvnovu datog teksta, odrediti kako klasa 
+koja treba da resi zadatak treba da izgleda. (na osvnovu objekta i niza odrediti atribute klase, na osnovu funkcija odrediti metode klase) 
+ 
+
+Data je struktura:
+
+var student = {
+	ime: "Pera",
+	prezime: "Peric",
+	fakultet: "FTN",
+	broj_indeksa: "RA-1"
+	prosecna_ocena: 0
+};
+
+var ocene = [8, 7, 6, 9, 8, 10, 8]; //Posto koristimo klase, ocena bi trebalo da bude deo klase Predmet, pri cemu polozene predmete dodajemo u niz koji se nalazi u studentu.
+Predmet se sastoji od (id-ja, naziva predmeta, imena profesora, ocene)
+
+Za zadatog studenta dodati dve metode. Prva metoda se zove predstaviSe() i treba da vrati osnovne podatke o studentu, npr:
+"Ja sam Pera Peric i studiram na FTN, sa prosecnom ocenom ...(ocena)"
+
+Druga metoda se zove izracunajProsecnuOcenu(). Ta metoda racuna prosecnu ocenu i upisuje
+u atribut prosecna_ocena.
+
+//Napraviti metodu omiljeni profesori koja vraca niz sa imenima profesora kod koga student ima ocenu 11.
+
+//Zadatak 7
+Omoguciti unos novih studenata putem forme kao i predstavljanje unetos studenta pomocu diva #tekst (u taj div se ispisuje rezultat poziva metode predstaviSe).
+
+Kako bi podrzali unos studenata putem forme, napraviti globalnu promenljivu studenti (niz studenata) na pocetku ts fajla.
+
+//Zadatak 8 
+Napisati funkciju koja prolazi kroz niz studenata i vraca one koje imaju barem 3 ocene 9.
+
+//Zadatak 9
+Implementirati funkcionalnosti za dugmice:
+	-"Predstavi sve studente" - prolazi se kroz niz studenata i rezultat metode predstaviSe se upisuje u div #tekst za svakog studenta
+	-"Predstavi devetke" - ispisuje rezultat metode predstaviSe za studente koje pronalazi funkcija iz zadatka 8 (logovati u konzolu te objekte)
+	-"Studenti sa omiljenim profesorima" - prolazi kroz niz studenata i upisuje njihovo ime i prezime i omiljene profesore npr. "Pera Peric ima omiljene profesore NazivProfesroa, Naziv profesora." (ovo odraditi samo za studente koji imaju omiljene profesore)
+
+//Zadatak 10
+Napraviti klasu Robot, robot ima atribut ime, i metode pozdrav i reset.
+Pre pravljenja Robota, potrebno im je izabrati ime. Ime robota treba da bude
+u formatu dva velika slova pa tri cifre: AF897, EO001 ... Imena robota treba
+nasumicno odrediti, pri cemu nije dozvoljeno da postoje dva robota sa istim imenom.
+Metoda pozdrav ispisuje "Zdravo ja sam robot: imeRobota". Metoda reset brise resetuje
+njegovo ime.
+
+--Postupak pravljenja objekta robota treba da se sastoji iz izbora imena. (Posebna funkcija) 
+--Ime robota se nasumicno odredjuje.
+--Nakon nasumicnog izbora imena, treba proci kroz niz svih postojecih robota (potrebno je napraviti niz u koji cemo smestati sve objekte robota) i proveriti da li neko od njih vec ima ime koje je generisano. Ako nema, napraviti novog robota sa tim imenom i dodati ga u niz robota. Ako ima, ponovo generisati ime robota (ovo je lako radit sa while ili do while petljom) i ponoviti postupak provere.
+
+-Nasumican izbor imena je moguc uz pomoc metode Math.random(), math random generise nasumicnu vrednost na intervalu od [0,1) npr. 0.16375662144085723 
+-Dobijenu vrednost mozemo da iskoristimo tako da uz pomoc mnozenja dobijemo indeks ili broj koji zelimo da iskoristimo.
+Npr. ako imamo niz karaktera ["A", "B", "C"], duzina niza (svojstvo length) je 3, ako broj 3 pomnozimo sa 0.16375662144085723
+dobicemo vrednost 0.4912698643225717. Ukoliko dobijnu vrednost pretvorimo u celobrojnu vrednost, uz pomoc metode Math.round()
+dobicemo vrednost 0. 0 je indeks elemenata niza karaktera, koji mozemo da iskoristimo da dobijemo karakter "A" za ime.
+
+Drugi moguci pristup je da iskorisitmo ASCII tabelu, svako slovo u ASCII tabeli ima svoj kod u dekadnom sistemu npr. za karakter "A" njegov ASCII kod je 65. Uz pomoc metode String.fromCharCode() mozemo na osnovu koda 65 da dobijemo karakter "A".
+
+
+//Zadatak 11
+Napisati program za evidenciju namestaja u salonu namestaja.
+Napisati klasu Namestaj, koja se sastoji od:
+	-privatnih atributa:
+		_sifra: number;
+		_naziv: string;
+		_jedinicnaCena: number;
+		_kolicinaUMagacinu: number;
+	-konstruktora sa parametrima
+	-get i set metoda za sve atribute
+Napisati klasu Salon, koja se sastoji od:
+	-privatnih atributa:
+		_naziv: string;
+		_adresa: string;
+		_telefon: string;
+		_namestaji: Namestaj[]; //Niz Namestaja
+	-konstruktora: konstruktor treba da kao parametre prima naziv, adresu i telefon, dok se niz namestaja u konstruktoru postavlja na prazan niz;
+	-metoda:
+		-get i set metode za sve atribute
+		-ispisiNamestajNaStanju(): void - ova metoda ispisuje (console.log) sve komade namestaja (objekte iz niza _namestaji) cija kolcina u magacinu je veca od nule:
+										  primer formata ispisa: "1. 111 Ester Komoda 15 50386.5"
+										  (indeks + 1) + sifra + naziv + kolcina u magacinu + cena	
+		-dodajNaLager(sifra: number, kolicina: number): void - metoda kao parametre prima sifru komada namestaja i kolicinu,
+															   prolazi kroz niz namestaja i ukoliko pronadje namestaj cija je 
+															   sifra jednaka sifri dobijenoj kao parametar, metoda povecava
+															   atribut kolicinaUMagacinu pronadjenog objekta za vrednost parametra kolcina
+		-dodajNamestaj(namestaj: Namestaj): void - metoda kao parametar prima komad namestaja koji treba da doda u niz _namestaji,
+												   metoda pre dodavanja prolazi prvo kroz niz namestaja (obicna for petlja) i ukoliko pronadje komad namestaja
+												   cija je sifra jednaka sifri namestaja iz parametra, ispisuje se poruka o gresci i prekida se izvrsenje metode (return;) 
+												   A ukoliko se ne pronadje namestaj sa istom sifrom, novi komad namestaja dodaje u niz _namestaji.
+		-public prodajKomad(sifra: number, kolicina: number): void - metoda prima sifru i kolicinu namestaja koje zeli da proda.
+																	 Prvo se pronalazi komad namestaja sa navedenom sifrom, ukoliko ne postoji takav komad namestaja
+																	 ispisati poruku o gresci (console.log). Ukoliko postoji komad namestaja sa navedenom sifrom, ali nema
+																	 dovoljne kolicine namestaja u magacinu, ispisati poruku o neuspesnoj kupovini. A ukoliko ima dozvoljeno
+																	 komada namestaja u magacinu, u pronadjenom objektu smanjiti vrednost atributa kolicinaUMagacinu za vrednost
+																	 parametra kolicina i ispisati poruku o uspesnoj kupovini u sledecem formatu:
+																	 "Uspesno ste kupili 11 namestaja Ester Komoda za 554251.5RSD!"
+																	 kolicina + naziv + jedinicnaCena * kolicina.
+										  
