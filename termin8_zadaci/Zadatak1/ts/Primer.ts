@@ -1,0 +1,1 @@
+console.log("U tsconfig.json izmenti files niz tako da u njemu stoje samo fajlovi koji ce biti poslednji u lancu triple slash referenciranja!")

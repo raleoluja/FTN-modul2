@@ -1,0 +1,86 @@
+﻿//Zadatak 1
+Napisati klasu Kamera koja ima polja: megaPikseli (number), freeSpace (number) i photoCounter (number). U klasi 
+implementirati:
+- Konstruktor sa parametrima
+- Getere i setere
+- Metod bool slikaj() - umanjuje vrednost polja freeSpace za vrednost polja megaPikseli pod uslovom da ima dovoljno 
+  memorije i u tom slučaju vraća true. U suprotnom, metod vraća false. Svaki uspesni poziv metode slikaj povecava photoCounter za jedan.
+Iz klase Kamera izvesti klasu VideoKamera koja sadrži polje videoCounter (number). U klasi implementirati:
+- Konstruktor sa parametrima
+- Geter i stere
+- Metod bool snimaj(number sekunde) - umanjuje vrednost polja freeSpace za proizvod vrednosti polja megaPikseli i vrednosti parametra sekunde pod uslovom da ima dovoljno memorije i u tom slučaju vraća true. 
+  U suprtonom, metod vraća false. Svaki uspesni poziv metode snimaj uvecava vrednost polja videoCounter za jedan.
+
+//Zadatak 2
+//Dat je tekst zadatka sa termina 2. Resiti zadatak tako da se koriste typescript klase:
+
+Na osnovu niza napraviti klase (Radnik i podklase Inzenjer, Tehnicar, Doktor)
+
+Onemoguciti instanciranje klase Radnik, Svi radnici bi umesto atributa plata trebali da imaju atribut osnovica. 
+Dat je spisak zaposlenih u sledecem obliku
+var zaposleni = [
+  ["pera",      "jova",     "marko"],
+  [28,          31,         39],
+  ["inzenjer",  "tehnicar", "doktor"],
+  [700,         0,        0]
+];
+
+
+Za zadate zaposlene implementirati da se plata prikazuje tako da: 
+tehnicar ima osnovicu
+izenjer ima osnovicu + 12 %
+doktor ima platu osnovica + 13%
+Napomena: Ispis plata vrsiti putem gettera za platu
+
+// Zadatak 3
+
+Napisati funkciju koja pronalazi srednju vrednost godina svih radnika. 
+
+// Zadatak 4
+Napisati metodu koja za radnika racuna godinu rodjenja na osnovu trenutnih godina
+Napomena: Za dobijanje trenutne godine mozete iskoristiti sledeci kod
+var d = new Date();
+var godina = d.getFullYear();
+
+5. Zadatak TablicaMnozenja //Pogledati folder
+6. Zadatak WebShop //Pogledati folder
+
+//Prototyping - Implementirati zadatke za prototyping  uz pomoc typescript-a
+
+Zadatak p1
+
+Kreirati objekat smestaj koji od atributa ima naziv, adresu i grad. Od funkcija ima jednu funkciju stampaj koja na stranicu ispisuje pomenute atribute.
+Kreirati objekat hotel koji nasledjuje smestaj i koji pored postojecih atributa iz smestaj ima atribut broj zvezdica (hotela).
+Hotel redefinise metodu stampaj tako da jos ispisuje broj zvezdica i ima jos jednu dodatnu metodu predstaviSe koja ukratko opisuje hotel.
+
+Zadatak p2
+
+Kreirate objekat poruka koji od atributa ima naziv posiljaoca, naziv primaoca i sadrzaj poruke. Ima metodu stampaj koja na stranicu ispisuje pomenute atribute.
+Kreirati objekat SMSPoruka koji nasledjuje Poruku. Od dodatnih atributa ima broj telefona posiljaoca i primaoca. Redefinise metodu stampaj tako da ukljucuje pomenute atribute.
+Kreirate objekat Email poruka koji nasledjuje poruku. Od dodatnih atributa ima email adrese posiljaoca i primaoca i redefinise metodu stampaj tako da ukljucuje pomenute atribute. Pored toga ima jos jednu metodu koja se zove potpisPosiljaoca i koja ima jedan parametar koji ce biti ispisan kao potpid.
+
+
+
+//Interface
+1. Prosiriti i prepraviti zadatak 3. sa termina 7:
+	-Implementirati entitet GeometrijskaFigura (sve geometrijske figure moraju da imaju metode
+	getPovrsina i getObim): za implementaciju interfejsa izabrati ili klasu ili interfejs 
+	i prodiskutuju odluku.	
+	-Implementirati klasu Kvadrat; klasa kvadrat je opisana pomocu polja a tipa number
+		-Implementirati konstruktor i getere i setere za sva polja
+	-Izmeniti klasu Pravougaonik da nasledjuje klasu Kvadrat
+	-Klase Kvadrat, Pravougaonik i Krug su geometrijske figure.
+	-Implementirati funkciju brojFigura koja prima dva parametra:
+		-dostupnaPovrsina tipa number
+		-figure tipa niz GeometrijskaFigura
+		Funkcija vraca koliko maksimalno geometriskih figura
+		se moze smestiti na radnu povrsinu. (Od dostupne povrsine
+		se oduzima vrednost povrsina iz niza, pri cemu je niz potrebno
+		sortirati u rastucem redosledu).
+	Za sortiranje iskoristit sledeci kod:
+
+		figure.sort((a, b) => {
+			return a.getPovrsina() - b.getPovrsina();
+		});
+		
+2. Zadatak TablicaMnozenja interface

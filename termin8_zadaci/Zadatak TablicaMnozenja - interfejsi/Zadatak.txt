@@ -1,0 +1,82 @@
+Napisati aplikaciju za vezbanje tablice mnozenja. (Slika 1)
+U formu se unosi ime igraca, faktor sa kojim mnozimo i broj problem koji zelimo da resimo.
+Npr. ako unesemo faktor 6 i broj problema 6*3. Klikom na dugme Start Game ispisuju se problemi 6*1; 6*2; 6*3;
+kao posebnim parovi text labela + input polje (Slika 2), i omogucuje se Calculate Score dugme.
+Klikom na dugme Calculate score se ispisuje u Scoreboard sekciji ime igraca i koliko je imao tacnih odgovora. (Slika 3)
+
+Aplikacija moze da se sastoji od:
+-Interfejsa:
+	-Person
+	-Result
+-Klasa:
+	-Game
+	-Player
+	-Scoreboard
+	-Utility
+	
+Interfejs Person definise:
+	-Atribut: name tipa string 
+	-Metodu: formatName koja vraca string
+	
+Interfejs Person implementira klasa Player.
+Klasa Player se sastoji od:
+	-Atributa: name tipa string, highScore tipa number.
+	-I implementacije metod intefrejsa.
+
+Interfejs Result definise:
+	Atribute: playerName tipa string, score tipa number, problemCount tipa number i factor tipa number.
+	
+Klasa Scoreboard se sastoji od:
+	-Atributa: results tipa Result niz (Result[])
+	-Metoda: 
+		- addResult
+			-Kao parametar prima novi Result i dodaje ga u niz results
+		-updateScoreBoard
+			-metoda ne prima parametre i vrsi update ispisa rezultata, odnosno:
+			-Html elementu, sa id-jem "scores", postavlja sadrzaj da bude ispis niza rezultat u formatu:
+			-Prva linija je h2 tag >> "<h2>Scoreboard</h2>" i onda za svaki od rezultata dodaje <h4> tag sa 
+			-sadrzajem koji je prikazan na slici 3: "ImeIgraca : rezultat/brojProblema for facotr" faktor rezultata
+
+Klasa Utility (vec implementirana) se sastoji od:
+	-Staticke metode getInputValue koja za prozleceni id html elementa vraca njegovu value vrednost (koristit se za HTMLInputElemente)
+	-Staticke metode se pozivaju kao ImeKlase.imeMetode -> Utility.getInputValue("nekId");
+	
+Klasa Game se sastoji od:
+	-Atributa: scoreboard tipa Scoreboard, player tipa Player, problemCount tipa number i factor tipa number;
+	-Metoda:
+		-displayGame (vec implementirana)
+			-Ispisuje input polja za faktore, gde svako input polje dobija id: "answer" + id
+		-calculateScore
+			-Koja racuna broj tacnih odgovora i pravi objekat koji zadovoljava interfejs Result
+			-i taj objekat dodaje u atribut scoreboard i poziva metodu updateScoreBoard
+			-nakon cega onemogucava klik na dugme calculate score.
+
+
+Aplikacija se pokrece iz app.ts fajla tako sto se registruju click handleri na dugme startGame i dugme calculate;
+Klik handler na dugme startGame:
+	-pravi novog igraca (cije ime preuzima pomocu staticke metode getInputValue)
+	-preuzima problemCount iz odgvarajuceg input polja
+	-preuzima factor iz odgvarajuceg input polja
+	-pravi novi objekat tipa Game (newGame promenljiva)
+	-poziva metodu displayGame
+	
+Klik nadler na dugme calculate poziva calculateScore metodu
+
+Implementirati TODOove u odgovarajucim fajlovima
+
+Napraviti interfejs Result koji sadrzi atribute: playerName: string; score: number; problemCount: number; factor: number;
+Napisati klasu Scoreboard:
+sadrzi privatno svojstvo results koje je niz rezultata
+metodu addResult koja dodaje rezultata
+metodu updateScoreBoard
+metoda updateScoreBoard u htmlElement sa id-jem socres upisuje <h2>Scoreboard</h2> i <h4> tagove koje prestavlaju konkretan ispis rezultata;
+
+
+Klikom na dugme StartGame pravi se novi objekat Player i uz pomoc Utility fajla se preuzima ime igraca, borj problema i faktor.
+Na osnovu tih podataka se pravi nova instanca klase Game i poziva metoda displayGame(). Klikom na dugme calculate poziva se metoda calculate objekta newGame.
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+Login.html:
+Omoguciti logovanje dva korisnika:
+	pera peric
+	mika mikic
+Ukoliko podaci prilikom logovanja nisu ispravni, ispod forme za logovanje (paragraf #poruka) ispisati
+crvenim slovima: "Neispravno korisnicko ime i/ili lozinka"
+
+webShop.html
+Ukoliko u URLu ne postoje podaci o korisniku, prebaciti se login.html
+Prilikom ucitavanja stranice (window.onload dogadjaj), preuzeti  korisnika iz URLa i u zavisnosti
+od logovanog korisnika, kreirati objekat korisnik tipa:
+	MaloprodajniKorisnik ukoliko se loguje pera
+	VeleprodajniKorisnik ukoliko se loguje mika
+
+MaloprodajniKorisnik i VeleprodajniKorisnik nasledjuju Korisnika
+Korisnik je opisan imenom i prezimenom.
+Sadrzi dve funkcije:
+	ispis: u paragraf #poruka upisuje prosledjenu poruku
+	stampaj: prosledjuje funkciji ispisu Hello poruku sa imenom logovanog korisnika
+
+Funkcija ispis koja pripada: MaloprodajniKorisnik/VeleprodajniKorisnik prima objekat koji predstavlja
+input polje cija je vrednost promenjna (tj. poziva se prilikom onchange dogadjaja).
+Radi sledece: 
+	preuzima kolicinu i cenu proizvoda
+		ispisuje cenu narudzbe ukoliko je MaloprodajniKorisnik
+		ispisuje cenu narudzbe sa popustom od 15% ukoliko je rec o VeleprodajniKorisnik
+		ispis vrsi pozivom funkcije iz Korisnika
+		
+Restruktuirati projekat da se koriste triple-slash direktive.
+
+	
